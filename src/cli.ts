@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import { Command } from "commander";
-import { truncateJsonArray, truncateJsonObject } from "./index";
 import {
   deepArrayObject,
   arrayObject,
@@ -11,6 +10,8 @@ import {
   object,
   mixedObject,
 } from "./data";
+import { truncateJsonArray } from "./truncate-array-object";
+import { truncateJsonObject } from "./truncate-json-object";
 
 const availableCommands = [
   "deepArrayObject",

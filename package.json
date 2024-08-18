@@ -1,5 +1,5 @@
 {
-  "name": "truncate-object",
+  "name": "json-truncator",
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "help": "ts-node cli.ts -h"
   },
   "bin": {
-    "truncate-json": "./dist/cli.js"
+    "json-truncator": "./dist/cli.js"
   },
   "keywords": [
     "json",
