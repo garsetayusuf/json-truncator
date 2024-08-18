@@ -8,7 +8,7 @@
     "help": "ts-node cli.ts -h"
   },
   "bin": {
-    "json-truncator": "./dist/cli.js"
+    "json-truncator": "dist/cli.js"
   },
   "keywords": [
     "json",
