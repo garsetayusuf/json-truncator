@@ -90,13 +90,13 @@ If the package is installed globally, you can use it directly from the command l
   truncate-json -c deepArrayObject -l 5
 ```
 
-- **Truncate a JSON Array by providing custom data:**: _(Note: Custom data support will be available in the next update)_
+- **Truncate a JSON Array by providing custom data**: _(Note: Custom data support will be available in the next update)_
 
 ```bash
   truncate-json -c customArray -d '[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]' -l 5
 ```
 
-- **Truncate a JSON Object by providing custom data:a**: _(Note: Custom data support will be available in the next update)_
+- **Truncate a JSON Object by providing custom data**: _(Note: Custom data support will be available in the next update)_
 
 ```bash
   truncate-json -c customObject -d '{"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}' -l 3
