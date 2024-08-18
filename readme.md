@@ -22,7 +22,7 @@ To use JsonTruncator, install the package via npm. You can install it locally wi
 
 ```bash
 npm i json-truncator
-```
+```         
 
 - **PNPM**
 
@@ -85,9 +85,6 @@ If the package is installed globally, you can use it directly from the command l
 ### Commands
 
 - **Truncate a JSON Array or Object using a predefined command:**:
-
-`available command: deepArrayObject, arrayObject, notArrayObject, mixedArray, deepObject, object, mixedObject
-`
 
 ```bash
   truncate-json -c deepArrayObject -l 5
