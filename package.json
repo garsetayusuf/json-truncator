@@ -1,5 +1,5 @@
 {
-  "name": "json-truncator",
+  "name": "json-truncator-temp",
   "version": "1.0.2",
   "main": "dist/index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "truncate",
     "array",
     "utility"
-  ],
+  ],  
   "author": "garsetayusuf@gmail.com",
   "license": "MIT",
   "description": "A utility to truncate JSON arrays or objects.",
