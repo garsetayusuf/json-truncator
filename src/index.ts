@@ -24,3 +24,5 @@ export class JsonTruncator {
     }
   }
 }
+
+export default JsonTruncator;
