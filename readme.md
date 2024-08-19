@@ -14,20 +14,26 @@
 
 ## Installation
 
-To use JsonTruncator, install the package via npm. You can install it locally within your project or globally if you intend to use it as a CLI tool.
+To use `JsonTruncator`, install the package via **NPM**, **PNPM** or **YARN**. You can install it locally within your project or globally if you intend to use it as a CLI tool.
 
 1\. Install dependencies:
 
 - **NPM**
 
 ```bash
-npm i json-truncator
-```         
+npm install json-truncator
+```
 
 - **PNPM**
 
 ```bash
-pnpm i json-truncator
+pnpm install json-truncator
+```
+
+- **YARN**
+
+```bash
+yarn add json-truncator
 ```
 
 2\.Install the package globally (optional, for CLI usage):
@@ -35,13 +41,19 @@ pnpm i json-truncator
 - **NPM**
 
 ```bash
-npm install -g json-truncator
+yarn install -g json-truncator
 ```
 
 - **PNPM**
 
 ```bash
-npm install -g json-truncator
+pnpm install -g json-truncator
+```
+
+- **YARN**
+
+```bash
+yarn global add json-truncator
 ```
 
 Installing the package globally allows you to use the truncate-json command directly from the command line.
@@ -84,30 +96,27 @@ If the package is installed globally, you can use it directly from the command l
 
 ### Commands
 
-- **Truncate a JSON Array or Object using a predefined command:**:
+- **Truncate a JSON Array or Object using a predefined command :**
 
 ```bash
-  truncate-json -c deepArrayObject -l 5
+json-truncator -c deepArrayObject -l 5
 ```
 
-- **Truncate a JSON Array by providing custom data**: _(Note: Custom data support will be available in the next update)_
+- **Truncate a JSON Array by providing custom data :**
 
 ```bash
-  truncate-json -c customArray -d '[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]' -l 5
+json-truncator -c -c customObject -l 2 -d '{"name": "John", "age": 30, "address": "123 Street"}'
 ```
 
-- **Truncate a JSON Object by providing custom data**: _(Note: Custom data support will be available in the next update)_
+- **Truncate a JSON Object by providing custom data :**
 
 ```bash
-  truncate-json -c customObject -d '{"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}' -l 3
+json-truncator -c customObject -l 2 -d '{"name": "John", "age": 30, "address": "123 Street"}'
 ```
-
-**Note**
-Currently, the CLI supports truncation using predefined commands only. The ability to provide custom data for truncation will be introduced in the next update.
 
 ### Options
 
-- `-c, --command <command>`: Command to execute (Available commands: `deepArrayObject`, `arrayObject`, `notArrayObject`, `mixedArray`, `deepObject`, `object`, `mixedObject`).
+- `-c, --command <command>`: Command to execute (Available commands: `deepArrayObject`, `arrayObject`, `notArrayObject`, `mixedArray`, `deepObject`, `object`, `mixedObject`, `customArray`, `customObject`).
 
 - `-l, --length <number>`: Maximum number of items to be displayed, `default 3`.
 

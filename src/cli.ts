@@ -21,6 +21,8 @@ const availableCommands = [
   "deepObject",
   "object",
   "mixedObject",
+  "customArray",
+  "customObject",
 ];
 
 const program = new Command();
@@ -45,6 +47,7 @@ program.parse(process.argv);
 const options = program.opts();
 const command = options.command;
 const maxLength = parseInt(options.length, 10);
+const data = options.data ? JSON.parse(options.data) : null;
 
 if (process.argv.length === 2) {
   // No arguments provided, show help
@@ -56,6 +59,14 @@ if (process.argv.length === 2) {
       `Invalid command: ${command}\nAvailable commands: ${availableCommands.join(
         ", "
       )}`
+    );
+    process.exit(1);
+  }
+
+  // Ensure that the --data option is only used with customArray or customObject
+  if (options.data && !["customArray", "customObject"].includes(command)) {
+    console.error(
+      `The --data option can only be used with the 'customArray' or 'customObject' commands.`
     );
     process.exit(1);
   }
@@ -99,6 +110,18 @@ if (process.argv.length === 2) {
         break;
       case "mixedObject":
         processAndPrint(mixedObject, false);
+        break;
+      case "customArray":
+        if (!data || !Array.isArray(data)) {
+          throw new Error("Invalid or missing JSON data for customArray");
+        }
+        processAndPrint(data, true);
+        break;
+      case "customObject":
+        if (!data || typeof data !== "object" || Array.isArray(data)) {
+          throw new Error("Invalid or missing JSON data for customObject");
+        }
+        processAndPrint(data, false);
         break;
       default:
         console.error("Unknown command");
